@@ -2,7 +2,7 @@
 
 Ever wanted a desktop assitant to help you on the go? Well worry not! I got you!
 
-#Requirements
+# Requirements
 
 pip install pyttsx3
 pip install SpeechRecognition
@@ -10,7 +10,7 @@ pip install wikipedia
 pip install bs4
 pip install requests
 
-#Commands
+# Commands
 Say these phrases and jarvis will handle the rest!
 
 1) open youtube
