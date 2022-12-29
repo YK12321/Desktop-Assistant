@@ -23,7 +23,7 @@ Say these phrases and jarvis will handle the rest!
 4) time
 5) thank you
 6) joke
-7) send email (require your email id and password
+7) send email (requires your email id and password)
 8) stop
 9) hold
 10) what can you do
