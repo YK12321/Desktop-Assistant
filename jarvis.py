@@ -51,33 +51,17 @@ def takeCommand():
 programOn = True
 
 def jokes():
-    joke1 = 'Why did Gmail reject password for 14 days? It was too weak!'
-    joke2 = 'How does a tree use Gmail? They Log in!'
-    joke3 = 'What do you call a computer that sings? Adell!'
-    joke4 = "Why did the laptop keep sneezing? It had a virus!"
-    joke5 = 'Why was the Google Employee late for work? He had a Hard drive!'
+    url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
+    response = requests.get(url)
+    joke_data = response.json()
 
-
-    choose = random.randint(1, 5)
-
-    final = ""
-
-    if choose == 1:
-        final = joke1
-
-    elif choose == 2:
-        final = joke2
-
-    elif choose == 3:
-        final = joke3
-
-    elif choose == 4:
-        final = joke4
-
+    if joke_data["type"] == "twopart":
+        final = f'{joke_data["setup"]} {joke_data["delivery"]}'
     else:
-        final = joke5
+        final = joke_data["joke"]
 
     speak(final)
+
 
 def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
